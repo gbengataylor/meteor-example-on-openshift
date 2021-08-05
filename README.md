@@ -14,7 +14,7 @@ oc new-project meteor-on-openshift
 ```
 
 ### Create Service Account to run as priviledged container
-Note: Only do this if your meteor app needs to run as priviledged. If it doesn't, skip this step and remove the serviceAccount field from meteor-deployment.yaml
+Note: Only do this if your meteor app needs to run as priviledged. If it doesn't, skip this step and remove the ```serviceAccount``` field from meteor-deployment.yaml
 ```sh
 oc create serviceaccount useroot
 oc adm policy add-scc-to-user anyuid -z useroot
