@@ -1,5 +1,5 @@
 # meteor-example-on-openshift
-Deploy a meter sample app to openshift
+Deploy a meter sample app to openshift (persistence not included)
 
 ## Optional
 Build sample image using https://dockerize.io/guides/docker-meteor-guide.
