@@ -4,7 +4,7 @@ Deploy a meter sample app to openshift (persistence not included)
 ## Optional
 Build sample image using https://dockerize.io/guides/docker-meteor-guide.
 
-This repo will be using this image quay.io/gbengataylor/meteor-tutorial:1.0 . To use your image that is hosted in a registry, edit meteor-deployment.yaml and replace the image name
+This repo will be using this image ```quay.io/gbengataylor/meteor-tutorial:1.0```. To use your image that is hosted in a registry, edit meteor-deployment.yaml and replace the image name
 
 ## Deploy
 
