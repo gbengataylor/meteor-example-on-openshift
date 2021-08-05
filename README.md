@@ -1,6 +1,8 @@
 # meteor-example-on-openshift
 Deploy a meter sample app to openshift (persistence not included)
 
+Question/todo : if a pvc is added will this speed up the meteor run/npm build that the container executes during a restart or redeployment? 
+
 ## Optional
 Build sample image using https://dockerize.io/guides/docker-meteor-guide.
 
