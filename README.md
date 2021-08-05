@@ -21,11 +21,12 @@ oc adm policy add-scc-to-user anyuid -z useroot
 
 ### Deploy App
 ```sh
-oc apply -f meteor-deployment.yaml
+oc apply -f .
 ```
 
 ### Test App
 ```sh 
+oc expose service meteor-tutorial
 oc get route
 ```
 
