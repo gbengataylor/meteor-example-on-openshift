@@ -1,0 +1,33 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  annotations:
+  name: meteor-tutorial
+  labels:
+    app: meteor-tutorial
+    app.kubernetes.io/component: meteor-tutorial
+    app.kubernetes.io/instance: meteor-tutorial
+    app.kubernetes.io/name: meteor-tutorial
+    app.kubernetes.io/part-of: meteor-tutorial-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: meteor-tutorial
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: meteor-tutorial
+        deploymentconfig: meteor-tutorial
+    spec:
+      containers:
+        - name: meteor-tutorial
+          image: quay.io/gbengataylor/meteor-tutorial:1.0
+          ports:
+            - containerPort: 3000
+              protocol: TCP
+          imagePullPolicy: IfNotPresent
+      restartPolicy: Always
+      serviceAccountName: useroot
+      serviceAccount: useroot
