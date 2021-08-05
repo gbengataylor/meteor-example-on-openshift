@@ -27,7 +27,7 @@ oc apply -f .
 
 ### Test App
 ```sh 
-oc expose service meteor-tutorial
+oc get route
 ```
 
 visit the url to view the app
