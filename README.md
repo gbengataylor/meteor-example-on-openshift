@@ -8,6 +8,10 @@ This repo will be using this image quay.io/gbengataylor/meteor-tutorial:1.0
 ## Deploy
 
 ### Create Service Account
+```sh
+oc create serviceaccount useroot
+oc adm policy add-scc-to-user anyuid -z useroot
+```
 
 ### Deploy App
 
