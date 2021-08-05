@@ -1,0 +1,18 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: meteor-tutorial
+  labels:
+    app: meteor-tutorial
+    app.kubernetes.io/component: meteor-tutorial
+    app.kubernetes.io/instance: meteor-tutorial
+    app.kubernetes.io/name: meteor-tutorial
+    app.kubernetes.io/part-of: meteor-tutorial
+spec:
+  to:
+    kind: Service
+    name: meteor-tutorial
+    weight: 100
+  port:
+    targetPort: 3000-tcp
+  wildcardPolicy: None
